@@ -66,12 +66,16 @@ body {
   border-radius: 100%;
   background: #ccc;
   margin: 0 10px;
+  transition: all 0.3s ease-in-out;
+}
+#bullets label:hover {
+  background-color: rgb(101, 101, 224);
 }
 #slide1:checked ~ #bullets label:nth-child(1),
 #slide2:checked ~ #bullets label:nth-child(2),
 #slide3:checked ~ #bullets label:nth-child(3),
 #slide4:checked ~ #bullets label:nth-child(4) {
-  background: #444;
+  background: rgb(101, 101, 224);
 }
 @media screen and (max-width: 900px) {
   #slide1:checked ~ #controls label:nth-child(2),
