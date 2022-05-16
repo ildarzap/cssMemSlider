@@ -1,10 +1,28 @@
 body {
-  color: #000;
-  font-family: 'Ruluko', sans-serif;
-  font-size: 24px;
+  color: #6767e0;
+  font-family: 'Concert One', cursive;
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.bg-custom {
+  background: linear-gradient(90deg, #d6c3c6, #9fba4e, #c0bf45);
+  background-size: 300% 300%;
+  animation: gradient 4s alternate infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
 }
 #slider {
-  margin: 0 auto;
   width: 800px;
   max-width: 100%;
 }
@@ -18,7 +36,6 @@ body {
 }
 #slides {
   padding: 10px;
-  background: #fff;
   position: relative;
   z-index: 1;
 }
@@ -95,14 +112,15 @@ body {
   transition: all 0.3s ease-in-out;
 }
 #bullets .bullet:hover {
-  background-color: rgb(101, 101, 224);
+  background-color: #6565e0;
 }
 #slide1:checked ~ .slider-bottom #bullets label:nth-child(1) .bullet,
 #slide2:checked ~ .slider-bottom #bullets label:nth-child(2) .bullet,
 #slide3:checked ~ .slider-bottom #bullets label:nth-child(3) .bullet,
 #slide4:checked ~ .slider-bottom #bullets label:nth-child(4) .bullet {
-  background: rgb(101, 101, 224);
+  background: #6767e0;
 }
+
 @media (max-width: 768px) {
   .slider-bottom {
     flex-direction: column;
@@ -116,5 +134,9 @@ body {
   }
   .slider-bottom {
     margin-top: 20px;
+  }
+  .slide-content {
+    width: 100%;
+    text-align: center;
   }
 }
